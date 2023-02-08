@@ -524,9 +524,9 @@ pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
 <li><a href="#_préparation_des_données_pour_lanalyse_exploratoire">Préparation des données pour l&#8217;analyse exploratoire</a>
 <ul class="sectlevel2">
 <li><a href="#_importation_des_données">Importation des données</a></li>
-<li><a href="#_nettoyage_des_données">Nettoyage des données</a></li>
+<li><a href="#_nettoyage_des_données_data_cleaning">Nettoyage des données (Data Cleaning)</a></li>
 <li><a href="#_choix_des_features_pertinents">Choix des features pertinents</a></li>
-<li><a href="#_ajout_transformation_des_features">Ajout / Transformation des features</a></li>
+<li><a href="#_ajout_transformation_des_features_features_engineering">Ajout / Transformation des features (Features Engineering)</a></li>
 <li><a href="#_optionnel_réduction_de_dimension">(Optionnel) Réduction de dimension</a></li>
 <li><a href="#_vérification_de_la_qualité_des_données">Vérification de la qualité des données</a></li>
 <li><a href="#_exploration_des_données">Exploration des données</a></li>
@@ -535,10 +535,10 @@ pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
 </li>
 <li><a href="#_modélisation_par_machine_learning">Modélisation par Machine Learning</a>
 <ul class="sectlevel2">
-<li><a href="#_les_étapes_importantes">Les étapes importantes</a></li>
+<li><a href="#_préparation_des_données_pour_le_machine_learning">Préparation des données pour le machine learning</a></li>
 <li><a href="#_choix_de_données_x_et_de_la_variable_cible_y">Choix de données X et de la variable cible y</a></li>
 <li><a href="#_split_partition_des_données">Split / partition des données</a></li>
-<li><a href="#_transformation_des_variables">Transformation des variables</a></li>
+<li><a href="#_transformation_des_variables_data_scaling_encoding">Transformation des variables (Data scaling &amp; Encoding)</a></li>
 <li><a href="#_validation_croisée">Validation croisée</a></li>
 <li><a href="#_choix_de_lalgorithme_de_modélisation">Choix de l&#8217;algorithme de modélisation</a></li>
 <li><a href="#_entraînement_du_modèle_et_réglage_des_hyperparamètre">Entraînement du modèle et réglage des Hyperparamètre</a></li>
@@ -621,7 +621,7 @@ pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
 </div>
 </div>
 <div class="sect2">
-<h3 id="_nettoyage_des_données"><a class="anchor" href="#_nettoyage_des_données"></a>Nettoyage des données</h3>
+<h3 id="_nettoyage_des_données_data_cleaning"><a class="anchor" href="#_nettoyage_des_données_data_cleaning"></a>Nettoyage des données (Data Cleaning)</h3>
 <div class="paragraph">
 <p>Supprimer les valeurs manquantes, les valeurs aberrantes et les lignes dupliquées, afin d&#8217;obtenir des données propres pour l&#8217;analyse.</p>
 </div>
@@ -671,7 +671,7 @@ pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
 </div>
 </div>
 <div class="sect2">
-<h3 id="_ajout_transformation_des_features"><a class="anchor" href="#_ajout_transformation_des_features"></a>Ajout / Transformation des features</h3>
+<h3 id="_ajout_transformation_des_features_features_engineering"><a class="anchor" href="#_ajout_transformation_des_features_features_engineering"></a>Ajout / Transformation des features (Features Engineering)</h3>
 <div class="paragraph">
 <p>Créer de nouvelles features ou transformer les features existantes pour les rendre plus adaptées à l&#8217;analyse.
 L&#8217;ajout ou la transformation des features peut être fait avec le code suivant:</p>
@@ -848,7 +848,7 @@ L&#8217;ajout ou la transformation des features peut être fait avec le code sui
 <p>En conclusion, la modélisation par Machine Learning est un outil puissant pour découvrir des relations cachées dans les données et pour améliorer les prévisions en utilisant les données historiques. Les deux types de modélisation ont leurs avantages et leurs limites et le choix dépend du type de problème à résoudre et des données disponibles.</p>
 </div>
 <div class="sect2">
-<h3 id="_les_étapes_importantes"><a class="anchor" href="#_les_étapes_importantes"></a>Les étapes importantes</h3>
+<h3 id="_préparation_des_données_pour_le_machine_learning"><a class="anchor" href="#_préparation_des_données_pour_le_machine_learning"></a>Préparation des données pour le machine learning</h3>
 <div class="paragraph">
 <p>Voici les étapes importantes que vous pouvez inclure dans votre projet de Machine Learning :</p>
 </div>
@@ -933,7 +933,7 @@ L&#8217;ajout ou la transformation des features peut être fait avec le code sui
 </div>
 </div>
 <div class="sect2">
-<h3 id="_transformation_des_variables"><a class="anchor" href="#_transformation_des_variables"></a>Transformation des variables</h3>
+<h3 id="_transformation_des_variables_data_scaling_encoding"><a class="anchor" href="#_transformation_des_variables_data_scaling_encoding"></a>Transformation des variables (Data scaling &amp; Encoding)</h3>
 <div class="paragraph">
 <p>Effectuer des transformations telles que l&#8217;encodage des variables catégorielles et la normalisation des variables numériques.</p>
 </div>
@@ -1393,7 +1393,7 @@ Enfin, nous avons entraîné le modèle <code>LogisticRegression</code> sur l&#8
 <div id="footer">
 <div id="footer-text">
 Version 0.1<br>
-Last updated 2023-02-05 12:18:32 UTC
+Last updated 2023-02-08 20:50:49 UTC
 </div>
 </div>
 </body>

@@ -62,7 +62,7 @@ df = pd.read_parquet("file.parquet")
 
 Il est important de noter que pour utiliser les méthodes read_parquet, vous devrez avoir installé la bibliothèque `fastparquet` en plus de `pandas`.
 
-=== Nettoyage des données
+=== Nettoyage des données (Data Cleaning)
 
 Supprimer les valeurs manquantes, les valeurs aberrantes et les lignes dupliquées, afin d'obtenir des données propres pour l'analyse.
 
@@ -106,7 +106,7 @@ print(df.head())
 --
 
 
-=== Ajout / Transformation des features
+=== Ajout / Transformation des features (Features Engineering)
 Créer de nouvelles features ou transformer les features existantes pour les rendre plus adaptées à l'analyse.
 L'ajout ou la transformation des features peut être fait avec le code suivant:
 
@@ -264,7 +264,7 @@ La modélisation non supervisée implique que les algorithmes sont formés à pa
 
 En conclusion, la modélisation par Machine Learning est un outil puissant pour découvrir des relations cachées dans les données et pour améliorer les prévisions en utilisant les données historiques. Les deux types de modélisation ont leurs avantages et leurs limites et le choix dépend du type de problème à résoudre et des données disponibles.
 
-=== Les étapes importantes
+=== Préparation des données pour le machine learning
 
 Voici les étapes importantes que vous pouvez inclure dans votre projet de Machine Learning :
 
@@ -324,7 +324,7 @@ Dans ce code, nous utilisons la fonction `train_test_split` pour diviser d'abord
 
 La variable `test_size` définit la taille de l'ensemble de test par rapport au nombre total d'exemples, et la variable `random_state` définit le générateur de nombres aléatoires utilisé pour sélectionner les exemples pour les ensembles d'entraînement et de test.
 
-=== Transformation des variables
+=== Transformation des variables (Data scaling & Encoding)
 Effectuer des transformations telles que l'encodage des variables catégorielles et la normalisation des variables numériques.
 
 Voici un exemple de code python pour la transformation des variables dans le contexte d'un programme de machine learning :
