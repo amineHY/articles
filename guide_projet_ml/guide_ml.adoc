@@ -277,6 +277,24 @@ Voici les étapes importantes que vous pouvez inclure dans votre projet de Machi
 
 Il est important de souligner que ces étapes ne sont pas strictes et peuvent varier en fonction de la complexité et de la nature de votre cas d'utilisation. Il est également important de documenter soigneusement chaque étape pour une meilleure compréhension et reproduction des résultats.
 
+=== Choix de l'algorithme de modélisation
+Déterminer le type de modèle à utiliser, tel qu'un algorithme de régression ou de classification, en fonction des objectifs et des caractéristiques des données.
+
+Pour choisir l'algorithme de modélisation approprié pour un jeu de données donné, vous pouvez suivre les étapes suivantes :
+
+. Déterminer le type de problème de machine learning: Il peut s'agir d'une tâche de régression ou de classification, selon le but du modèle.
+
+. Évaluer la quantité et la qualité des données disponibles : la quantité de données et leur qualité peuvent influencer le choix d'un algorithme particulier.
+
+. Évaluer les caractéristiques des données : les caractéristiques telles que le nombre de variables, le type de variables (numériques, catégorielles), la distribution de la cible, etc. peuvent influencer le choix d'un algorithme.
+
+. Évaluer les objectifs du modèle : les objectifs tels que la précision, la vitesse d'entraînement, la facilité d'utilisation, etc. peuvent également influencer le choix d'un algorithme.
+
+. Expérimenter avec différents algorithmes : une fois les facteurs précédents pris en compte, vous pouvez expérimenter avec différents algorithmes pour voir lequel offre les meilleurs résultats pour votre jeu de données.
+
+Après avoir évalué ces facteurs, vous pouvez utiliser des bibliothèques telles que `scikit-learn` pour choisir et entraîner l'algorithme de modélisation approprié pour vos données.
+
+
 
 === Choix de données X et de la variable cible y
 
@@ -336,6 +354,10 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder
+from sklearn.linear_model import LogisticRegression
+from sklearn.impute import SimpleImputer
+
+
 
 # Chargement des données
 data = pd.read_csv("data.csv")
@@ -350,6 +372,10 @@ numerical_transformer = StandardScaler()
 # Transformation des variables catégorielles
 categorical_transformer = OneHotEncoder()
 
+# Impute missing values with the mean
+imputer = SimpleImputer(strategy='mean')
+
+
 # Définir les colonnes pour les transformations
 numerical_cols = X.select_dtypes(include=["float64"]).columns
 categorical_cols = X.select_dtypes(include=["object"]).columns
@@ -362,7 +388,8 @@ preprocessor = ColumnTransformer(
     ])
 
 # Créer un pipeline pour l'entraînement
-model_pipeline = Pipeline(steps=[("preprocessor", preprocessor),
+model_pipeline = Pipeline(steps=[("imputer", imputer),
+                                 ("preprocessor", preprocessor),
                                  ("classifier", LogisticRegression())])
 
 model_pipeline.fit(X, y)
@@ -414,23 +441,6 @@ print("Score sur l'ensemble de test :", logreg.score(X_test_scaled, y_test))
 --
 
 
-
-=== Choix de l'algorithme de modélisation
-Déterminer le type de modèle à utiliser, tel qu'un algorithme de régression ou de classification, en fonction des objectifs et des caractéristiques des données.
-
-Pour choisir l'algorithme de modélisation approprié pour un jeu de données donné, vous pouvez suivre les étapes suivantes :
-
-. Déterminer le type de problème de machine learning: Il peut s'agir d'une tâche de régression ou de classification, selon le but du modèle.
-
-. Évaluer la quantité et la qualité des données disponibles : la quantité de données et leur qualité peuvent influencer le choix d'un algorithme particulier.
-
-. Évaluer les caractéristiques des données : les caractéristiques telles que le nombre de variables, le type de variables (numériques, catégorielles), la distribution de la cible, etc. peuvent influencer le choix d'un algorithme.
-
-. Évaluer les objectifs du modèle : les objectifs tels que la précision, la vitesse d'entraînement, la facilité d'utilisation, etc. peuvent également influencer le choix d'un algorithme.
-
-. Expérimenter avec différents algorithmes : une fois les facteurs précédents pris en compte, vous pouvez expérimenter avec différents algorithmes pour voir lequel offre les meilleurs résultats pour votre jeu de données.
-
-Après avoir évalué ces facteurs, vous pouvez utiliser des bibliothèques telles que `scikit-learn` pour choisir et entraîner l'algorithme de modélisation approprié pour vos données.
 
 
 === Entraînement du modèle et réglage des Hyperparamètre
