@@ -2,7 +2,7 @@
 :toc: auto
 :toc-title: On this page
 
-== Machine Learning
+== Machine Learning Articles
 * link:guide_projet_ml/guide_ml.html[Guide pour la réalisation de projets en Machine Learning]
 
 ==  Articles Published on Medium
