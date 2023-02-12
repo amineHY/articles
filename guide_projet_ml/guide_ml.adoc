@@ -1,25 +1,6 @@
 = Guide pour la réalisation de projets en Machine Learning
+include::config/config_asciidoc.adoc[]
 Amine Hadj-Youcef
-:toc:
-:sectnums!:
-:toc-title: Table des matières
-:lang: fr-FR
-:doctype: article
-:docinfo: include
-:revdate: 04/02/2023
-:icons: font
-:sectanchors:
-:stylesheet:
-:highlightjs-languages: python
-:doctype: book
-:header:
-:header-text: Header Text
-:footer:
-:footer-text: Footer Text
-:html-source: html
-:revnumber: 0.1
-:revdate: 2023-02-05
-:source-highlighter: pygments
 
 == Introduction
 
@@ -710,3 +691,10 @@ Lorsqu'une variable est transformée avec un logarithme, le modèle de prédicti
 
 En résumé, l'application du logarithme, la prédiction avec un modèle de machine learning et le retrait du logarithme sont une technique courante pour ajuster les données pour la modélisation en machine learning.
 
+== Data Visualisation
+
+https://pyviz.org/tools.html#geospatial
+
+image::../media/guide_ml/image_2023-02-11-21-18-55_.png[]
+
+Cette page répertorie les bibliothèques pour visualiser les données en Python. Si vous constatez l'absence d'un outil Python, veuillez ouvrir une PR pour tools.yml. Les outils sont triés dans chaque catégorie selon leur nombre total de téléchargements par mois lorsqu'ils sont ajoutés à la liste. Notez que les téléchargements Conda sont calculés en ajoutant le nombre total de téléchargements sur les canaux par défaut, conda-forge et bioconda ; les données pour les autres canaux ne sont pas actuellement incluses. Notez également que les badges pour les étoiles, les contributeurs, la licence et les téléchargements PyPi sont mis en cache pour éviter que les utilisateurs ne dépassent les limites de taux des badges. Comme le cache peut échouer occasionnellement pour certains badges de téléchargements PyPi, leur contrepartie en direct est affichée à la place et peut être identifiée par leur fond gris.

@@ -1,0 +1,20 @@
+:toc:
+:sectnums!:
+:toc-title: Table des matières
+:lang: fr-FR
+:doctype: article
+:docinfo: include
+:revdate: 04/02/2023
+:icons: font
+:sectanchors:
+:stylesheet:
+:highlightjs-languages: python
+:doctype: book
+:header:
+:header-text: Header Text
+:footer:
+:footer-text: Footer Text
+:html-source: html
+:revnumber: 0.1
+:revdate: 2023-02-05
+:source-highlighter: pygments
